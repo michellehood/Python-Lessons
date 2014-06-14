@@ -1,0 +1,37 @@
+print 'Making sandwich #'
+
+bread = 144
+pb = 300
+jelly = 256
+
+if bread >= 2 and pb >= 1 and jelly >= 1:
+	print 'Woohoo! You can make a sandwich'
+else:
+	print 'No lunch today :('
+
+if bread >= 2 and pb >= 1 and jelly >= 1:
+	total = bread/2
+	if pb < total:
+		total = pb
+	if jelly < total:
+		total = jelly
+	print 'I can make {0} sandwhiches!' .format(total)
+else:
+	print 'No PB&J for me!'
+
+if bread % 2>0 and pb% 2>0 and jelly % 2>0:
+	print 'You can make an open face sandwhich!'
+else:
+	print 'You can make a sandwhich!'
+
+if bread<2:
+	print 'Not enough bread to make a sandwhich'
+if pb < 1:
+	print "Not enough pb to make a sandwhich"
+if jelly < 1:
+	print 'Not enough helly to make a sandwhich'
+if pb >=1 and bread >= 2 and jelly <1:
+	print 'You can make a pb sandwhich, but there isn''t enough jelly'
+
+totalpb = pb-jelly or bread-jelly
+print 'I can make {0} PB&J sandwhiches and {1} pb sanwhiches.' .format(total, totalpb)
